@@ -1,7 +1,7 @@
 public class OchoReinas {
 
     // Tamaño del tablero (8x8 en este caso)
-    static final int N = 8;
+    static final int N = 10;
 
     // Función para imprimir el tableron 8x8
     static void imprimirTablero(int tablero[][]) {
