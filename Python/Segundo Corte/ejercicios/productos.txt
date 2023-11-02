@@ -1,0 +1,9 @@
+# Leer los datos de los productos desde un diccionario
+productos_data = {
+    
+    "001": {"nombre": " Gaseosa    ", "precio": 4500},
+    "002": {"nombre": " Pan        ", "precio": 3000},
+    "003": {"nombre": " Cerveza    ", "precio": 2500},
+    "004": {"nombre": " Gomitas    ", "precio": 1500},
+    "005": {"nombre": " Chocolatina", "precio": 4000}
+}

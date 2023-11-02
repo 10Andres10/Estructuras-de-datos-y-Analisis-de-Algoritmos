@@ -1,0 +1,14 @@
+
+    DATOS Y PROCESOS CORPORATIVOS LTDA
+
+Facturas de ventas Nro. 10      Fecha: 29/10/2023
+       Nit: 890090200-1 Regimen Comun
+    Cliente: 1005542832 - Andr�s Felipe L�pez Pinto
+
+|Codigo |Nombre  |Cantidad|Vlr Unit|%Iva |   Iva  |Vlr Total|
+|001    |Gaseosa |  5     |  4500  |  15 | 3375.0 | 22500.0 |
+
+                    Subtotal: $3000
+                    Total Iva: $300
+                    Total Venta: $3300
+
