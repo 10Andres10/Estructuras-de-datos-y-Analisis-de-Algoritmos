@@ -1,0 +1,12 @@
+001,,,25
+002,Rangel,Sebastian,30
+003,Puerto,Maicol,20
+004,Nova,Jean,35
+005,Carrascal,Carlos,28
+
+código, apellidos, nombres, créditos
+123, Lopez, Andres, 30
+456, Apellido2, Nombre2, 25
+789, Apellido3, Nombre3, 35
+...
+
