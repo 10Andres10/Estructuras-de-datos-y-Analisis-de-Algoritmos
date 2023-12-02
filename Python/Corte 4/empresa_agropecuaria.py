@@ -1,5 +1,4 @@
 import sys
-import math
 
 potreros = [
     ('A', ['E', 'F', 'B']),
@@ -11,7 +10,6 @@ potreros = [
     ('E', ['A', 'F']),
 ]
 
-# Distancias entre potreros de mayor a menor distancia
 distancias_ordenadas = [
     ('F', 'D', 400),
     ('A', 'F', 300),
@@ -47,14 +45,17 @@ def arbol_recubridor_minimo(potreros):
             if visitados[i]:
                 for j in range(len(potreros[i][1])):
                     potrero_conectado = potreros[i][1][j]
-                    if not visitados[potreros.index((potrero_conectado, []))]:
-                        distancia = calcular_distancia(potrero_actual, potrero_conectado)
-                        if distancia < distancia_minima:
+                    index_potrero_conectado = [p[0] for p in potreros].index(potrero_conectado)
+                    if not visitados[index_potrero_conectado]:
+                        distancia = calcular_distancia(potreros[i][0], potrero_conectado)
+                        if distancia is not None and distancia < distancia_minima:
                             distancia_minima = distancia
+                            potrero_actual = potreros[i][0]
                             potrero_destino = potrero_conectado
 
         recorrido.append((potrero_actual, potrero_destino))
-        visitados[potreros.index((potrero_destino, []))] = True
+        index_potrero_destino = [p[0] for p in potreros].index(potrero_destino)
+        visitados[index_potrero_destino] = True
 
     return recorrido
 
@@ -65,11 +66,28 @@ def calcular_suministro_total(potreros, cantidad_por_animal):
 def calcular_suministro_por_potrero(potrero, cantidad_por_animal):
     return 1 * cantidad_por_animal
 
+def mostrar_recorrido(recorrido):
+    print("\nRecorrido ideal:")
+    for arco in recorrido:
+        print(f"Potrero {arco[0]} -> Potrero {arco[1]}")
+
+def mostrar_cantidad_total(cantidad_total):
+    print(f"\nCantidad total de suministro: {cantidad_total} gramos")
+
+def mostrar_suministro_por_potrero(potrero, suministro_por_potrero):
+    print(f"\nSuministro para Potrero {potrero}: {suministro_por_potrero} gramos")
+
+def mostrar_listado_suministro_por_potrero(potreros, cantidad_por_animal):
+    print("\nListado de suministro por potrero:")
+    for potrero in potreros:
+        suministro_por_potrero = calcular_suministro_por_potrero(potrero[0], cantidad_por_animal)
+        print(f"Potrero {potrero[0]}: {suministro_por_potrero} gramos")
+
 def main():
     while True:
         print("\nMenú:")
-        print("1. Árbol recubridor mínimo.")
-        print("2. Cálculo total suministro de todo el suministro.")
+        print("1. Calcular recorrido ideal.")
+        print("2. Calcular cantidad total de suministro.")
         print("3. Calcular suministro por potrero.")
         print("4. Salir.")
 
@@ -77,21 +95,14 @@ def main():
 
         if opcion == "1":
             recorrido_ideal = arbol_recubridor_minimo(potreros)
-            print("Recorrido ideal:")
-            for arco in recorrido_ideal:
-                print(f"Potrero {arco[0]} -> Potrero {arco[1]}")
+            mostrar_recorrido(recorrido_ideal)
 
         elif opcion == "2":
             cantidad_total = calcular_suministro_total(potreros, 120)
-            print(f"Cantidad total de suministro: {cantidad_total} gramos")
+            mostrar_cantidad_total(cantidad_total)
 
         elif opcion == "3":
-            potrero = input("Ingrese el nombre del potrero (A-G): ").upper()
-            if potrero in [p[0] for p in potreros]:
-                suministro_por_potrero = calcular_suministro_por_potrero(potrero, 120)
-                print(f"Suministro para Potrero {potrero}: {suministro_por_potrero} gramos")
-            else:
-                print("Potrero no válido.")
+            mostrar_listado_suministro_por_potrero(potreros, 120)
 
         elif opcion == "4":
             print("¡Hasta luego!")

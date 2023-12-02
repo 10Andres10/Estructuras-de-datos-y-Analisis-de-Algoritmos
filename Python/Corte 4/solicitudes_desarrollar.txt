@@ -1,0 +1,4 @@
+OficinaA,12345,Usuario1
+OficinaB,67890,Usuario2
+OficinaA,54321,Usuario3
+OficinaC,98765,Usuario1

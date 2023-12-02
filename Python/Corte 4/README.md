@@ -31,3 +31,17 @@ print(matriz_adyacencia)
 # 3. Calcular suministro por potrero.
 # 4. Salir.
 -----------------------------------------------------------------------------------------
+## Una empresa requiere transportar X cantidad de peso por una ruta por definir entre dos puntos de acuerdo al grafo de la parte inferior, calcular el costo de transportar la carga entre dos puntos si el km de recorrido es a $2000 por cada 150kg y los tramos entre cada NODO son en km. Se debe generar una factura para el cliente, especificando el origen y destino, la ruta a seguir y el costo de transporte.
+-----------------------------------------------------------------------------------------
+## Se recibe un archivo de texto en el que se encuentran las solicitudes de manejo de 5 documentos, en donde se define el destino final de los mismos, identificación y el nombre del solicitante. El vértice A es la oficina que recibe los documentos. Determinar la duración en días de trámite para cada documento generando un ticket para cada usuario (archivo de texto cuyo nombre es la letra A seguida de la identificación del usuario) informando lo anterior. Calcular el total de días requeridos para todos los documentos y generar una estadística de las oficinas con documentos requeridos y el número de solicitudes por usuario. Todo lo anterior se debe manejar desde un menú de opciones.
+
+## Cada respuesta de cada solicitud es un archivo de texto.
+
+## 1. Agregar archivo
+## 2. Calcular total de dias requeridos para todos los documentos.
+## 3.Generar estadística de documentos requeridos por oficina.
+## 4. Generar estadística de solicitudes por usuario.
+## 5. Salir.
+
+Necesito que si algún usuario hace una nueva solicitud, esta se le sobreescriba y se añada en el mismo archivo de texto creado como factura, de esta manera el archivo no queda doble sino que en el archivo de texto (factura) quedan las dos solicitudes del usuario.
+-----------------------------------------------------------------------------------------

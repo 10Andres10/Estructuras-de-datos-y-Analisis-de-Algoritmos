@@ -1,0 +1,9 @@
+Factura de Transporte
+======================
+Origen: A
+Destino: D
+Ruta a seguir: A->B->D
+Peso de la carga: 100.0 kg
+Costo de transporte: $12666.67
+======================
+¡Gracias por elegir nuestro servicio!
