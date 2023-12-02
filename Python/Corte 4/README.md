@@ -43,5 +43,8 @@ print(matriz_adyacencia)
 ## 4. Generar estadística de solicitudes por usuario.
 ## 5. Salir.
 
+documentos.py
+solicitudes_desarrollar.txt
+
 Necesito que si algún usuario hace una nueva solicitud, esta se le sobreescriba y se añada en el mismo archivo de texto creado como factura, de esta manera el archivo no queda doble sino que en el archivo de texto (factura) quedan las dos solicitudes del usuario.
 -----------------------------------------------------------------------------------------
