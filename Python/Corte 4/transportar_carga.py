@@ -47,8 +47,8 @@ def calcular_costo(distancia, peso):
     costo_total = (distancia * costo_por_km) * (peso / 150)  # Calculamos el costo total considerando el peso
     return costo_total
 
-def generar_factura(origen, destino, ruta, costo_transporte, peso, nombre_archivo):
-    with open(nombre_archivo, 'w') as archivo:
+def generar_factura(origen, destino, ruta, costo_transporte, peso, solicitudes_desarrollar):
+    with open(solicitudes_desarrollar, 'w') as archivo:
         archivo.write("Factura de Transporte\n")
         archivo.write("======================\n")
         archivo.write(f"Origen: {origen}\n")
@@ -121,11 +121,11 @@ costo, ruta = dijkstra(mi_grafo, origen, destino)
 costo_transporte = calcular_costo(costo, peso)
 
 # Imprimir factura en un archivo
-nombre_archivo = "factura_transportista.txt"
-generar_factura(origen, destino, ruta, costo_transporte, peso, nombre_archivo)
+solicitudes_desarrollar = "factura_transportista.txt"
+generar_factura(origen, destino, ruta, costo_transporte, peso, solicitudes_desarrollar)
 
 # Imprimir mensaje de éxito
-print(f"\nFactura generada correctamente. Puede encontrar la factura en el archivo: {nombre_archivo}")
+print(f"\nFactura generada correctamente. Puede encontrar la factura en el archivo: {solicitudes_desarrollar}")
 import heapq
 
 class Grafo:
@@ -175,8 +175,8 @@ def calcular_costo(distancia, peso):
     costo_total = (distancia * costo_por_km) * (peso / 150)  # Calculamos el costo total considerando el peso
     return costo_total
 
-def generar_factura(origen, destino, ruta, costo_transporte, peso, nombre_archivo):
-    with open(nombre_archivo, 'w') as archivo:
+def generar_factura(origen, destino, ruta, costo_transporte, peso, solicitudes_desarrollar):
+    with open(solicitudes_desarrollar, 'w') as archivo:
         archivo.write("Factura de Transporte\n")
         archivo.write("======================\n")
         archivo.write(f"Origen: {origen}\n")
@@ -249,8 +249,8 @@ costo, ruta = dijkstra(mi_grafo, origen, destino)
 costo_transporte = calcular_costo(costo, peso)
 
 # Imprimir factura en un archivo
-nombre_archivo = "factura_transportista.txt"
-generar_factura(origen, destino, ruta, costo_transporte, peso, nombre_archivo)
+solicitudes_desarrollar = "factura_transportista.txt"
+generar_factura(origen, destino, ruta, costo_transporte, peso, solicitudes_desarrollar)
 
 # Imprimir mensaje de éxito
-print(f"\nFactura generada correctamente. Puede encontrar la factura en el archivo: {nombre_archivo}")
+print(f"\nFactura generada correctamente. Puede encontrar la factura en el archivo: {solicitudes_desarrollar}")

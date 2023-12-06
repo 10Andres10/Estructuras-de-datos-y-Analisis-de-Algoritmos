@@ -48,3 +48,27 @@ solicitudes_desarrollar.txt
 
 Necesito que si algún usuario hace una nueva solicitud, esta se le sobreescriba y se añada en el mismo archivo de texto creado como factura, de esta manera el archivo no queda doble sino que en el archivo de texto (factura) quedan las dos solicitudes del usuario.
 -----------------------------------------------------------------------------------------
+## Parcial #4
+Tengo el siguiente ejercicio:
+
+Para un grafo conexo no dirigido de 4 nodos, representado mediante la siguiente matriz de adyacencia, determinar para n posibles rutas definidas por el usuario , los valores eficientes para cada una y el menor valor (se debe validar que el origen no sea el mismo destino.)
+
+grafos = [
+    ('A', ['B', 'C', 'D']),    
+    ('B', ['A', 'C','D']),
+    ('C', ['A', 'B','D']),
+    ('D', ['A', 'C','B']),
+]
+
+distancias_ordenadas = [
+    ('A', 'B', 3),
+    ('A', 'C', 4),
+    ('A', 'D', 1),
+    ('B', 'C', 1),
+    ('B', 'D', 3),
+    ('C', 'D', 5),
+]
+
+Los resultados deben ser generados en un archivo txt o json a escogencia del usuario.
+
+Pero me hacen falta los anteriores requerimientos.
